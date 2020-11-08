@@ -1,0 +1,22 @@
+{
+    "name": "leugin/api-response",
+    "description": "helper for standart response",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Miguel Q.",
+            "email": "meqh1992@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework": "^8.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leugin\\ApiResponse\\": "src/"
+        }
+    }
+}
