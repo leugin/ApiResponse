@@ -116,13 +116,14 @@ abstract class ApiResponse
             'status' => Response::HTTP_BAD_REQUEST,
             'message' => $message
         ];
-        $dev  = [
-            'file' => $e->getFile(),
-            'line' => $e->getLine(),
-            'exception' => $e->getMessage(),
-        ];
-        error_log($message, $dev);
+
         if (config('app.debug')) {
+            $dev  = [
+                'file' => $e->getFile(),
+                'line' => $e->getLine(),
+                'exception' => $e->getMessage(),
+            ];
+            error_log($message, $dev);
             $exception['dev'] = $dev;
          }
         $data = array_merge($data, $exception);
